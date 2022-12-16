@@ -1,76 +1,52 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 
-class Task1 extends StatelessWidget {
+class Task1Page extends StatelessWidget {
+  Task1Page({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
       appBar: AppBar(
-        leading: Icon(
-          Icons.menu,
-          color: Colors.black,
-          size: 30,
-        ),
-        title: Text("First Application"),
+        elevation: 0,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        title: Text("EME-IH Borg - "),
         actions: [
           IconButton(
-              onPressed: () {
-                print("dd");
-              },
-              icon: Icon(Icons.tag)),
-          Icon(Icons.notification_important),
-          Icon(Icons.settings),
+            onPressed: () {},
+            icon: Icon(Icons.settings),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.logout),
+          )
         ],
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          height: 100,
-          decoration: BoxDecoration(
-              color: Colors.purpleAccent,
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(color: Colors.black, width: 2)),
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Abdelmenam Tarek",
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "Alexandria,Egypt",
-                      style: TextStyle(
-                        color: Colors.grey,
-                      ),
-                    ),
-                  ],
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(15.0),
+          child: Stack(
+            alignment: Alignment.topLeft,
+            children: [
+              Image.asset(
+                "images/fluuter1.png",
+              ),
+              Icon(Icons.favorite),
+              Align(
+                alignment: Alignment.topRight,
+                child: Icon(
+                  Icons.add,
+                  color: Colors.white,
                 ),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.star,
-                      color: Colors.amber,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text("5"),
-                  ],
-                ),
-              ],
-            ),
+              ),
+              Positioned(top: 10, left: 15, child: Text("HELLO"))
+            ],
           ),
         ),
       ),
