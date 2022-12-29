@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class AgeCalc extends StatefulWidget {
-  AgeCalc({Key? key}) : super(key: key);
+  const AgeCalc({Key? key}) : super(key: key);
 
   @override
   State<AgeCalc> createState() => _AgeCalcState();

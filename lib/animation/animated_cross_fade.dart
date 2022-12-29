@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 
 class AnimatedCrossFadeTest extends StatefulWidget {
@@ -12,7 +10,11 @@ class AnimatedCrossFadeTest extends StatefulWidget {
 class AnimatedCrossFadeTestState extends State<AnimatedCrossFadeTest> {
   bool selected = false;
 
-
+  void _updateSize() {
+    setState(() {
+      selected = !selected;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
