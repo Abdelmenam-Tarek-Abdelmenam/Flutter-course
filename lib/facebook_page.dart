@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class FaceBookClone extends StatelessWidget {
-  const FaceBookClone({Key? key}) : super(key: key);
+  FaceBookClone(this.email, this.number, {super.key});
+
+  String email;
+  int number;
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +15,9 @@ class FaceBookClone extends StatelessWidget {
         appBar: AppBar(
           elevation: 2,
           backgroundColor: Colors.white,
+          foregroundColor: Colors.black,
           title: Text(
-            "facebook",
+            "facebook $number",
             style: TextStyle(
                 color: Colors.blue, fontSize: 24, fontWeight: FontWeight.bold),
           ),
@@ -116,7 +120,7 @@ class FaceBookClone extends StatelessWidget {
                 ],
               ),
             ),
-            Text("Video"),
+            Center(child: Text(email)),
             Text("Group"),
             Text("notification"),
             Text("Menu"),
